@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 class TextFile {
-    private String filePath = "C:\\Users\\shiha\\Desktop\\Java\\OOP_lab04-coalaboooy-master\\T4\\Raw data file.bin";
+    private String filePath = "C:\\Users\\IVC5-8\\Downloads\\Lab4\\OOP_lab04-ishida-master\\T4\\Raw data file.bin";
 
     //Конструктор
     TextFile (String filePath) {
@@ -21,7 +21,7 @@ class TextFile {
         }
     }
 
-    //Заполняет новый объект класса Test данными из файла
+
     Syllabus setTestInfo() throws FileNotFoundException {
         Scanner fileIn = new Scanner(new FileReader(filePath));
         int nNumber = fileIn.nextInt();
@@ -32,12 +32,6 @@ class TextFile {
         //fileIn.nextLine();
         String pName = fileIn.next();
         String year = fileIn.next();
-        System.out.println(nNumber);
-        System.out.println(nName);
-        System.out.println(work);
-        System.out.println(pNumber);
-        System.out.println(pName);
-        System.out.println(year);
         return new Syllabus(nNumber, nName, work, pNumber, pName, year);
     }
 }
